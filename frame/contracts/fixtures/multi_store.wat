@@ -1,4 +1,4 @@
-;; Does two stores to two seperate storage items
+;; Does two stores to two separate storage items
 ;; Expects (len0, len1) as input.
 (module
 	(import "seal0" "seal_set_storage" (func $seal_set_storage (param i32 i32 i32)))

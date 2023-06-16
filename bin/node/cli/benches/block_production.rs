@@ -154,7 +154,7 @@ fn prepare_benchmark(client: &FullClient) -> (usize, Vec<OpaqueExtrinsic>) {
 	let src = Sr25519Keyring::Alice.pair();
 	let dst: MultiAddress<AccountId32, u32> = Sr25519Keyring::Bob.to_account_id().into();
 
-	// Add as many tranfer extrinsics as possible into a single block.
+	// Add as many transfer extrinsics as possible into a single block.
 	for nonce in 0.. {
 		let extrinsic: OpaqueExtrinsic = create_extrinsic(
 			client,
@@ -188,7 +188,7 @@ fn block_production(c: &mut Criterion) {
 	let node = new_node(tokio_handle.clone());
 	let client = &*node.client;
 
-	// Buliding the very first block is around ~30x slower than any subsequent one,
+	// Building the very first block is around ~30x slower than any subsequent one,
 	// so let's make sure it's built and imported before we benchmark anything.
 	let mut block_builder = client.new_block(Default::default()).unwrap();
 	block_builder.push(extrinsic_set_time(1)).unwrap();

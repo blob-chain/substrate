@@ -266,7 +266,7 @@ impl<T: Config<I>, I: 'static> fungibles::approvals::Mutate<<T as SystemConfig>:
 		Self::do_approve_transfer(asset, owner, delegate, amount)
 	}
 
-	// Aprove spending tokens from a given account
+	// Approve spending tokens from a given account
 	fn transfer_from(
 		asset: T::AssetId,
 		owner: &<T as SystemConfig>::AccountId,

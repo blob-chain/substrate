@@ -44,7 +44,7 @@ impl<AccountId: IdentifierT, P: PerThing128> Assignment<AccountId, P> {
 	///
 	/// Note that this might create _un-normalized_ assignments, due to accuracy loss of `P`. Call
 	/// site might compensate by calling `try_normalize()` on the returned `StakedAssignment` as a
-	/// post-precessing.
+	/// post-processing.
 	///
 	/// If an edge ratio is [`Bounded::min_value()`], it is dropped. This edge can never mean
 	/// anything useful.

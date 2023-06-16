@@ -84,7 +84,7 @@ impl Registry {
 			CounterVec::new(
 				Opts::new(
 					"substrate_storage_notification_subscribers",
-					"Number of subscribers in storage notification sytem",
+					"Number of subscribers in storage notification system",
 				),
 				&["action"], // added | removed
 			)

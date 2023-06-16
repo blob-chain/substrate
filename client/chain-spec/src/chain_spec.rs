@@ -237,7 +237,7 @@ impl<G, E> ChainSpec<G, E> {
 		self.client_spec.fork_id.as_deref()
 	}
 
-	/// Additional loosly-typed properties of the chain.
+	/// Additional loosely-typed properties of the chain.
 	///
 	/// Returns an empty JSON object if 'properties' not defined in config
 	pub fn properties(&self) -> Properties {

@@ -149,7 +149,7 @@ pub async fn seal_block<B, BI, SC, C, E, TP, CIDP, P>(
 		}
 
 		// Make sure we return the same post-hash that will be calculated when importing the block
-		// This is important in case the digest_provider added any signature, seal, ect.
+		// This is important in case the digest_provider added any signature, seal, etc.
 		let mut post_header = header.clone();
 		post_header.digest_mut().logs.extend(params.post_digests.iter().cloned());
 

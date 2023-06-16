@@ -21,7 +21,7 @@
 //!
 //! The kitchen-sink catalog of the the FRAME macros and their various syntax options.
 //!
-//! This example does not focus on pallet instancing, `dev_mode`, and does nto include any 'where'
+//! This example does not focus on pallet instancing, `dev_mode`, and does not include any 'where'
 //! clauses on `T`. These will both incur additional complexity to the syntax, but are not discussed
 //! here.
 

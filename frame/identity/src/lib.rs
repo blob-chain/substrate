@@ -133,7 +133,7 @@ pub mod pallet {
 		#[pallet::constant]
 		type MaxAdditionalFields: Get<u32>;
 
-		/// Maxmimum number of registrars allowed in the system. Needed to bound the complexity
+		/// Maximum number of registrars allowed in the system. Needed to bound the complexity
 		/// of, e.g., updating judgements.
 		#[pallet::constant]
 		type MaxRegistrars: Get<u32>;

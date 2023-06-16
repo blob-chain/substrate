@@ -2684,7 +2684,7 @@ benchmarks! {
 		sbox.invoke();
 	}
 
-	// w_call_indrect = w_bench - 3 * w_param
+	// w_call_indirect = w_bench - 3 * w_param
 	#[pov_mode = Ignored]
 	instr_call_indirect {
 		let r in 0 .. INSTR_BENCHMARK_RUNS;

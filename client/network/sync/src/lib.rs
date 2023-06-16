@@ -175,7 +175,7 @@ mod rep {
 	/// Reputation change for peers which send us a block with bad justifications.
 	pub const BAD_JUSTIFICATION: Rep = Rep::new(-(1 << 16), "Bad justification");
 
-	/// Reputation change when a peer sent us invlid ancestry result.
+	/// Reputation change when a peer sent us invalid ancestry result.
 	pub const UNKNOWN_ANCESTOR: Rep = Rep::new(-(1 << 16), "DB Error");
 
 	/// Peer response data does not have requested bits.
@@ -436,7 +436,7 @@ enum PreValidateBlockAnnounce<H> {
 		/// Should the peer be disconnected?
 		disconnect: bool,
 	},
-	/// The pre-validation was sucessful and the announcement should be
+	/// The pre-validation was successful and the announcement should be
 	/// further processed.
 	Process {
 		/// Is this the new best block of the peer?
@@ -1809,7 +1809,7 @@ where
 			// peers that were downloading justifications
 			// should be kept in that state.
 			if let PeerSyncState::DownloadingJustification(_) = p.state {
-				// We make sure our commmon number is at least something we have.
+				// We make sure our common number is at least something we have.
 				p.common_number = self.best_queued_number;
 				self.peers.insert(id, p);
 				return None
@@ -3368,19 +3368,19 @@ mod test {
 		assert_eq!(sync.peers.get(&peer_id3).unwrap().common_number, 50);
 	}
 
-	/// Send a block annoucnement for the given `header`.
+	/// Send a block announcement for the given `header`.
 	fn send_block_announce(
 		header: Header,
 		peer_id: &PeerId,
 		sync: &mut ChainSync<Block, TestClient>,
 	) {
-		let block_annnounce = BlockAnnounce {
+		let block_announce = BlockAnnounce {
 			header: header.clone(),
 			state: Some(BlockState::Best),
 			data: Some(Vec::new()),
 		};
 
-		sync.push_block_announce_validation(*peer_id, header.hash(), block_annnounce, true);
+		sync.push_block_announce_validation(*peer_id, header.hash(), block_announce, true);
 
 		// Poll until we have procssed the block announcement
 		block_on(poll_fn(|cx| loop {

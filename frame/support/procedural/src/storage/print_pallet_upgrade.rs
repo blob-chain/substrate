@@ -9,7 +9,7 @@ fn check_print_pallet_upgrade() -> bool {
 	std::env::var(PRINT_PALLET_UPGRADE).is_ok()
 }
 
-/// Convert visibilty as now objects are defined in a module.
+/// Convert visibility as now objects are defined in a module.
 fn convert_vis(vis: &syn::Visibility) -> &'static str {
 	match vis {
 		syn::Visibility::Inherited => "pub(super)",

@@ -567,7 +567,7 @@ impl SlotProportion {
 		Self(inner.clamp(0.0, 1.0))
 	}
 
-	/// Returns the inner that is guaranted to be in the range `[0,1]`.
+	/// Returns the inner that is guaranteed to be in the range `[0,1]`.
 	pub fn get(&self) -> f32 {
 		self.0
 	}

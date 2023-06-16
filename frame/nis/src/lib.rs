@@ -436,7 +436,7 @@ pub mod pallet {
 		},
 		/// An automatic funding of the deficit was made.
 		Funded { deficit: BalanceOf<T> },
-		/// A receipt was transfered.
+		/// A receipt was transferred.
 		Transferred { from: T::AccountId, to: T::AccountId, index: ReceiptIndex },
 	}
 

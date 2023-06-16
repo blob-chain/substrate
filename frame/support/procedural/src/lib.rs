@@ -781,7 +781,7 @@ pub fn storage_alias(_: TokenStream, input: TokenStream) -> TokenStream {
 }
 
 /// This attribute can be used to derive a full implementation of a trait based on a local partial
-/// impl and an external impl containing defaults that can be overriden in the local impl.
+/// impl and an external impl containing defaults that can be overridden in the local impl.
 ///
 /// For a full end-to-end example, see [below](#use-case-auto-derive-test-pallet-config-traits).
 ///
@@ -1277,7 +1277,7 @@ pub fn compact(_: TokenStream, _: TokenStream) -> TokenStream {
 /// `pallet-scheduler`). Thus migration might be needed. To mitigate against some of this, the
 /// `#[pallet::call_index($idx)]` attribute can be used to fix the order of the dispatchable so
 /// that the `Call` enum encoding does not change after modification. As a general rule of
-/// thumb, it is therefore adventageous to always add new calls to the end so you can maintain
+/// thumb, it is therefore advantageous to always add new calls to the end so you can maintain
 /// the existing order of calls.
 ///
 /// ### Macro expansion

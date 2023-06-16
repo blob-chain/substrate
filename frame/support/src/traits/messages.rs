@@ -43,7 +43,7 @@ pub enum ProcessMessageError {
 	/// Hints the message processor to cease servicing this queue and proceed to the next
 	/// one. This is seen as a *hint*, not an instruction. Implementations must therefore handle
 	/// the case that a queue is re-serviced within the same block after *yielding*. A queue is
-	/// not required to *yield* again when it is being re-serviced withing the same block.
+	/// not required to *yield* again when it is being re-serviced within the same block.
 	Yield,
 }
 

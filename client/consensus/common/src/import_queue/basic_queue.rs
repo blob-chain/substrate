@@ -41,7 +41,7 @@ use crate::{
 };
 
 /// Interface to a basic block import queue that is importing blocks sequentially in a separate
-/// task, with plugable verification.
+/// task, with pluggable verification.
 pub struct BasicQueue<B: BlockT, Transaction> {
 	/// Handle for sending justification and block import messages to the background task.
 	handle: BasicQueueHandle<B>,
@@ -189,7 +189,7 @@ impl<B: BlockT, Transaction: Send> ImportQueue<B> for BasicQueue<B, Transaction>
 	/// Start asynchronous runner for import queue.
 	///
 	/// Takes an object implementing [`Link`] which allows the import queue to
-	/// influece the synchronization process.
+	/// influence the synchronization process.
 	async fn run(mut self, mut link: Box<dyn Link<B>>) {
 		loop {
 			if let Err(_) = self.result_port.next_action(&mut *link).await {

@@ -227,7 +227,7 @@ pub mod tests {
 
 		let store: BeefyKeystore = Some(store).into();
 
-		let msg = b"are you involved or commited?";
+		let msg = b"are you involved or committed?";
 
 		let sig1 = store.sign(&alice, msg).unwrap();
 		let sig2 = Keyring::Alice.sign(msg);
@@ -245,7 +245,7 @@ pub mod tests {
 
 		let alice = Keyring::Alice.public();
 
-		let msg = b"are you involved or commited?";
+		let msg = b"are you involved or committed?";
 		let sig = store.sign(&alice, msg).err().unwrap();
 		let err = Error::Signature("ecdsa_sign_prehashed() failed".to_string());
 
@@ -257,7 +257,7 @@ pub mod tests {
 		let store: BeefyKeystore = None.into();
 
 		let alice = Keyring::Alice.public();
-		let msg = b"are you involved or commited";
+		let msg = b"are you involved or committed";
 
 		let sig = store.sign(&alice, msg).err().unwrap();
 		let err = Error::Keystore("no Keystore".to_string());
@@ -277,7 +277,7 @@ pub mod tests {
 		let store: BeefyKeystore = Some(store).into();
 
 		// `msg` and `sig` match
-		let msg = b"are you involved or commited?";
+		let msg = b"are you involved or committed?";
 		let sig = store.sign(&alice, msg).unwrap();
 		assert!(BeefyKeystore::verify(&alice, &sig, msg));
 

@@ -175,7 +175,7 @@ impl Clone for BenchDb {
 
 		// We clear system cache after db clone but before any warmups.
 		// This populates system cache with some data unrelated to actual
-		// data we will be quering further under benchmark (like what
+		// data we will be querying further under benchmark (like what
 		// would have happened in real system that queries random entries
 		// from database).
 		drop_system_cache();

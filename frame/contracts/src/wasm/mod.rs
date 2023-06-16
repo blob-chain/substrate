@@ -1303,7 +1303,7 @@ mod tests {
 
 	#[test]
 	fn contract_ecdsa_to_eth_address() {
-		/// calls `seal_ecdsa_to_eth_address` for the contstant and ensures the result equals the
+		/// calls `seal_ecdsa_to_eth_address` for the constant and ensures the result equals the
 		/// expected one.
 		const CODE_ECDSA_TO_ETH_ADDRESS: &str = r#"
 (module
@@ -2831,7 +2831,7 @@ mod tests {
 	(import "seal0" "seal_return" (func $seal_return (param i32 i32 i32)))
 	(import "env" "memory" (memory 1 1))
 
-	;; [0, 32) zero-adress
+	;; [0, 32) zero-address
 	(data (i32.const 0)
 		"\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00"
 		"\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00"

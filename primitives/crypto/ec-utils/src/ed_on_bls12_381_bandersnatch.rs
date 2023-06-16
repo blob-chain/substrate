@@ -31,7 +31,7 @@ pub fn sw_msm(bases: Vec<u8>, scalars: Vec<u8>) -> Result<Vec<u8>, ()> {
 	msm_sw_generic::<BandersnatchConfig>(bases, scalars)
 }
 
-/// Compute a multi scalar mulitplication for twisted_edwards through
+/// Compute a multi scalar multiplication for twisted_edwards through
 /// arkworks.
 pub fn te_msm(bases: Vec<u8>, scalars: Vec<u8>) -> Result<Vec<u8>, ()> {
 	msm_te_generic::<BandersnatchConfig>(bases, scalars)

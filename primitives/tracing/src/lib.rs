@@ -17,7 +17,7 @@
 
 //! Substrate tracing primitives and macros.
 //!
-//! To trace functions or invidual code in Substrate, this crate provides [`within_span`]
+//! To trace functions or individual code in Substrate, this crate provides [`within_span`]
 //! and [`enter_span`]. See the individual docs for how to use these macros.
 //!
 //! Note that to allow traces from wasm execution environment there are
@@ -96,7 +96,7 @@ pub use crate::types::{WASM_NAME_KEY, WASM_TARGET_KEY, WASM_TRACE_IDENTIFIER};
 /// This project only provides the macros and facilities to manage tracing
 /// it doesn't implement the tracing subscriber or backend directly – that is
 /// up to the developer integrating it into a specific environment. In native
-/// this can and must be done through the regular `tracing`-facitilies, please
+/// this can and must be done through the regular `tracing`-facilities, please
 /// see their documentation for details.
 ///
 /// On the wasm-side we've adopted a similar approach of having a global

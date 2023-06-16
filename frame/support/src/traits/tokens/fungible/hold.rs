@@ -131,7 +131,7 @@ pub trait Unbalanced<AccountId>: Inspect<AccountId> {
 	/// invariants such as any Existential Deposits needed or overflows/underflows.
 	/// If this cannot be done for some reason (e.g. because the account doesn't exist) then an
 	/// `Err` is returned.
-	// Implmentation note: This should increment the consumer refs if it moves total on hold from
+	// Implementation note: This should increment the consumer refs if it moves total on hold from
 	// zero to non-zero and decrement in the opposite direction.
 	//
 	// Since this was not done in the previous logic, this will need either a migration or a

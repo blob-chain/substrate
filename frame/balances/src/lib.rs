@@ -902,14 +902,14 @@ pub mod pallet {
 			Self::try_mutate_account(who, |a, _| -> Result<R, DispatchError> { Ok(f(a)) })
 		}
 
-		/// Returns `true` when `who` has some providers or `insecure_zero_ed` feature is disnabled.
+		/// Returns `true` when `who` has some providers or `insecure_zero_ed` feature is disabled.
 		/// Returns `false` otherwise.
 		#[cfg(not(feature = "insecure_zero_ed"))]
 		fn have_providers_or_no_zero_ed(_: &T::AccountId) -> bool {
 			true
 		}
 
-		/// Returns `true` when `who` has some providers or `insecure_zero_ed` feature is disnabled.
+		/// Returns `true` when `who` has some providers or `insecure_zero_ed` feature is disabled.
 		/// Returns `false` otherwise.
 		#[cfg(feature = "insecure_zero_ed")]
 		fn have_providers_or_no_zero_ed(who: &T::AccountId) -> bool {

@@ -123,7 +123,7 @@ pub fn expand_call(def: &mut Def) -> proc_macro2::TokenStream {
 			quote!(#reference)
 		}
 	} else {
-		// For the dev-mode do not provide a documenation link as it will break the
+		// For the dev-mode do not provide a documentation link as it will break the
 		// `cargo doc` if the pallet is private inside a test.
 		|method: &CallVariantDef| {
 			let reference = format!("See `Pallet::{}`.", method.name);

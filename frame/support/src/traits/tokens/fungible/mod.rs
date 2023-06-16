@@ -17,7 +17,7 @@
 
 //! The traits for dealing with a single fungible token class and any associated types.
 //!
-//! ### User-implememted traits
+//! ### User-implemented traits
 //! - `Inspect`: Regular balance inspector functions.
 //! - `Unbalanced`: Low-level balance mutating functions. Does not guarantee proper book-keeping and
 //!   so should not be called into directly from application code. Other traits depend on this and

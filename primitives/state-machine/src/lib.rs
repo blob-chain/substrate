@@ -2106,7 +2106,7 @@ mod tests {
 						// a inner hashable node
 						(&b"k"[..], Some(&long_vec[..])),
 						// need to ensure this is not an inline node
-						// otherwhise we do not know what is accessed when
+						// otherwise we do not know what is accessed when
 						// storing proof.
 						(&b"key1"[..], Some(&vec![5u8; 32][..])),
 						(&b"key2"[..], Some(&b"val3"[..])),

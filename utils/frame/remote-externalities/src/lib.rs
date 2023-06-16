@@ -916,7 +916,7 @@ where
 			);
 			std::fs::write(path, encoded).map_err(|_| "fs::write failed")?;
 
-			// pending_ext was consumed when creating the snapshot, need to reinitailize it
+			// pending_ext was consumed when creating the snapshot, need to reinitialize it
 			let mut pending_ext = TestExternalities::new_with_code_and_state(
 				Default::default(),
 				Default::default(),

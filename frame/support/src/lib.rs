@@ -1915,7 +1915,7 @@ pub mod pallet_prelude {
 /// `pallet-scheduler`). Thus migration might be needed. To mitigate against some of this, the
 /// `#[pallet::call_index($idx)]` attribute can be used to fix the order of the dispatchable so
 /// that the `Call` enum encoding does not change after modification. As a general rule of
-/// thumb, it is therefore adventageous to always add new calls to the end so you can maintain
+/// thumb, it is therefore advantageous to always add new calls to the end so you can maintain
 /// the existing order of calls.
 ///
 /// Also see [`pallet::call_index`](`frame_support::pallet_macros::call_index`)
@@ -2462,7 +2462,7 @@ pub mod pallet_prelude {
 /// 	//
 /// 	// The macro generates event metadata, and derive Clone, Debug, Eq, PartialEq and Codec
 /// 	#[pallet::event]
-/// 	// Generate a funciton on Pallet to deposit an event.
+/// 	// Generate a function on Pallet to deposit an event.
 /// 	#[pallet::generate_deposit(pub(super) fn deposit_event)]
 /// 	pub enum Event<T: Config> {
 /// 		/// doc comment put in metadata

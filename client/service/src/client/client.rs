@@ -953,7 +953,7 @@ where
 				// NOTE: we're setting the finalized block as best block, this might
 				// be slightly inaccurate since we might have a "better" block
 				// further along this chain, but since best chain selection logic is
-				// plugable we cannot make a better choice here. usages that need
+				// pluggable we cannot make a better choice here. usages that need
 				// an accurate "best" block need to go through `SelectChain`
 				// instead.
 				operation.op.mark_head(hash)?;

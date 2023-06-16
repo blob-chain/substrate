@@ -513,7 +513,7 @@ pub mod pallet {
 		Unfounded { founder: T::AccountId },
 		/// Some funds were deposited into the society account.
 		Deposit { value: BalanceOf<T, I> },
-		/// A group of members has been choosen as Skeptics
+		/// A group of members has been chosen as Skeptics
 		SkepticsChosen { skeptics: Vec<T::AccountId> },
 	}
 

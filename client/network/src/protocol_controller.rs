@@ -373,7 +373,7 @@ impl ProtocolController {
 		self.peer_store.report_disconnect(peer_id);
 	}
 
-	/// Ask `Peerset` if the peer has a reputation value not sufficent for connection with it.
+	/// Ask `Peerset` if the peer has a reputation value not sufficient for connection with it.
 	fn is_banned(&self, peer_id: &PeerId) -> bool {
 		self.peer_store.is_banned(peer_id)
 	}

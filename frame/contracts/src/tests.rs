@@ -1477,7 +1477,7 @@ fn cannot_self_destruct_in_constructor() {
 	ExtBuilder::default().existential_deposit(50).build().execute_with(|| {
 		let _ = Balances::deposit_creating(&ALICE, 1_000_000);
 
-		// Fail to instantiate the BOB because the contructor calls seal_terminate.
+		// Fail to instantiate the BOB because the constructor calls seal_terminate.
 		assert_err_ignore_postinfo!(
 			Contracts::instantiate_with_code(
 				RuntimeOrigin::signed(ALICE),
@@ -5112,7 +5112,7 @@ fn cannot_set_code_indeterministic_code() {
 		.unwrap()
 		.account_id;
 
-		// We do not allow to set the code hash to a non determinstic wasm
+		// We do not allow to set the code hash to a non deterministic wasm
 		assert_err!(
 			<Pallet<Test>>::bare_call(
 				ALICE,

@@ -295,7 +295,7 @@ impl Parse for PalletDeclaration {
 /// A struct representing a path to a pallet. `PalletPath` is almost identical to the standard
 /// Rust path with a few restrictions:
 /// - No leading colons allowed
-/// - Path segments can only consist of identifers separated by colons
+/// - Path segments can only consist of identifiers separated by colons
 #[derive(Debug, Clone)]
 pub struct PalletPath {
 	pub inner: Path,
@@ -556,7 +556,7 @@ fn parse_pallet_parts_no_generic(input: ParseStream) -> Result<Vec<PalletPartNoG
 pub struct Pallet {
 	/// The name of the pallet, e.g.`System` in `System: frame_system`.
 	pub name: Ident,
-	/// Either automatically infered, or defined (e.g. `MyPallet ...  = 3,`).
+	/// Either automatically inferred, or defined (e.g. `MyPallet ...  = 3,`).
 	pub index: u8,
 	/// The path of the pallet, e.g. `frame_system` in `System: frame_system`.
 	pub path: PalletPath,

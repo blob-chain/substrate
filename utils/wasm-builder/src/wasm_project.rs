@@ -560,9 +560,9 @@ impl Profile {
 	///
 	/// # Note
 	///
-	/// Can be overriden by setting [`crate::WASM_BUILD_TYPE_ENV`].
+	/// Can be overridden by setting [`crate::WASM_BUILD_TYPE_ENV`].
 	fn detect(wasm_project: &Path) -> Profile {
-		let (name, overriden) = if let Ok(name) = env::var(crate::WASM_BUILD_TYPE_ENV) {
+		let (name, overridden) = if let Ok(name) = env::var(crate::WASM_BUILD_TYPE_ENV) {
 			(name, true)
 		} else {
 			// First go backwards to the beginning of the target directory.
@@ -585,14 +585,14 @@ impl Profile {
 				.to_string();
 			(name, false)
 		};
-		match (Profile::iter().find(|p| p.directory() == name), overriden) {
-			// When not overriden by a env variable we default to using the `Release` profile
+		match (Profile::iter().find(|p| p.directory() == name), overridden) {
+			// When not overridden by a env variable we default to using the `Release` profile
 			// for the wasm build even when the main build uses the debug build. This
 			// is because the `Debug` profile is too slow for normal development activities.
 			(Some(Profile::Debug), false) => Profile::Release,
-			// For any other profile or when overriden we take it at face value.
+			// For any other profile or when overridden we take it at face value.
 			(Some(profile), _) => profile,
-			// For non overriden unknown profiles we fall back to `Release`.
+			// For non overridden unknown profiles we fall back to `Release`.
 			// This allows us to continue building when a custom profile is used for the
 			// main builds cargo. When explicitly passing a profile via env variable we are
 			// not doing a fallback.

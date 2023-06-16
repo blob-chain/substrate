@@ -396,7 +396,7 @@ impl OverlayedChanges {
 		Ok(())
 	}
 
-	/// Call this before transfering control to the runtime.
+	/// Call this before transferring control to the runtime.
 	///
 	/// This protects all existing transactions from being removed by the runtime.
 	/// Calling this while already inside the runtime will return an error.

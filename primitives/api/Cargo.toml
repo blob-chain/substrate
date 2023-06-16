@@ -46,7 +46,7 @@ std = [
 	"scale-info/std",
 	"sp-metadata-ir/std",
 ]
-# Special feature to disable logging completly.
+# Special feature to disable logging completely.
 #
 # By default `sp-api` initializes the `RuntimeLogger` for each runtime api function. However,
 # logging functionality increases the code size. It is recommended to enable this feature when

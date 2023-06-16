@@ -44,7 +44,7 @@ fn transfer_dust_removal_tst1_should_work() {
 			assert_eq!(Balances::free_balance(&2), 0);
 
 			// As expected beneficiary account 3
-			// received the transfered fund.
+			// received the transferred fund.
 			assert_eq!(Balances::free_balance(&3), 450);
 
 			// Dust balance is deposited to account 1

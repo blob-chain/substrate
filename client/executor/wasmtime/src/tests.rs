@@ -267,7 +267,7 @@ fn test_nan_canonicalization(instantiation_strategy: InstantiationStrategy) {
 
 	/// A NaN with canonical payload bits.
 	const CANONICAL_NAN_BITS: u32 = 0x7fc00000;
-	/// A NaN value with an abitrary payload.
+	/// A NaN value with an arbitrary payload.
 	const ARBITRARY_NAN_BITS: u32 = 0x7f812345;
 
 	// This test works like this: we essentially do
